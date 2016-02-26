@@ -1,0 +1,7 @@
+define(function() {
+  var res = {<% items.forEach(function(item, index, list){ %>
+      <%= index? ',' : ' ' %> <%- lib._s.rpad(JSON.stringify(item[0]), 60) %> : <%- JSON.stringify(item[1]) %><% }) %>
+  };
+
+  return res;
+});
